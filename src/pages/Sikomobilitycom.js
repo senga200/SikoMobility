@@ -5,7 +5,7 @@ import PartnersSection from "../components/PartnersSection";
 import OpinionsSection from "../components/OpinionsSection";
 import ServicesSection from "../components/ServicesSection";
 
-const Sikomobilitycom = () => {
+function Sikomobilitycom() {
   return (
     <div className="relative bg-gray-100 w-screen text-left text-29xl text-white font-nunito-sans">
       <Nav />
@@ -15,6 +15,6 @@ const Sikomobilitycom = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default Sikomobilitycom;

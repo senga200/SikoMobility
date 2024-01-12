@@ -87,7 +87,7 @@ function OpinionsCaroussel() {
       spanDate: "2023-09-10",
     },
   ];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % datas.length);
@@ -100,7 +100,7 @@ function OpinionsCaroussel() {
   };
   return (
     <div className="relative">
-      <div className="absolute left-0">
+      <div className="absolute">
         <Button
           buttonText="Avis précédent"
           onClick={prevSlide}
@@ -108,9 +108,13 @@ function OpinionsCaroussel() {
         />
       </div>
 
-      {datas.map((data) => (
-        <OpinionCard key={data.id} data={data} isActive={currentIndex} />
-      ))}
+      {datas.map((data) => {
+        if (data.id === currentIndex) {
+          return (
+            <OpinionCard key={data.id} data={data} isActive={currentIndex} />
+          );
+        }
+      })}
 
       <div className="absolute right-0">
         <Button

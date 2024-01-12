@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useState } from "react";
 
-const Nav = () => {
+function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -15,24 +15,23 @@ const Nav = () => {
 
   const handleButtonClick = () => {
     alert("Simulation de financement.");
-    console.log("bouton cliqué simulation !!");
   };
 
   const handleLogoClick = () => {
     window.open("https://sikomobility.com", "_blank");
-    console.log("logo cliqué");
   };
 
   const handleAppClick = () => {
     window.open("https://app.sikomobility.com", "_blank");
-    console.log("app cliqué");
   };
 
   return (
     <nav className="justify-end absolute w-full top-0 bg-gray-200 box-border h-[138px] flex flex-col items-center px-10 py-5 text-2xl  text-dodgerblue font-nunito border-b-[2px] border-solid border-dimgray">
       <div className="flex w-[330px] md:w-[1280px]">
         {/* TAILLE */}
-        <div className="w-full sm:w-[1280px] sm:pt-0 items-center justify-between pt-4 pb-0 pl-4 sm:pb-0 box-border">
+
+        {/* Logo */}
+        <div className="w-full sm:w-[1280px] sm:pt-0 items-center pt-4 pb-0 pl-4 sm:pb-0 box-border">
           <Logo
             title="siko mobility"
             handleLogoClick={handleLogoClick}
@@ -42,22 +41,22 @@ const Nav = () => {
 
         {/* Menu de navigation */}
         <div
-          className={`sm:flex flex-col sm:w-[350px] sm:pt-12 items-start justify-start pt-5 pb-5 sm:py-0 pr-0 pl-0 text-left ${
+          className={`sm:flex flex-row sm:w-[500px] sm:pt-12 items-start justify-start pt-5 pb-5 sm:py-0 pr-0 pl-0 text-left ${
             isOpen
-              ? "block text-right   h-[50px] pr-28 mt-10 pl-10 border-[2px] border-solid border-darkslategray"
+              ? "block text-right   h-[40px] pr-36 mt-10 pl-10 border-[2px] border-solid border-darkslategray"
               : "hidden"
           }`}
         >
-          <div className="self-stretch rounded flex flex-col items-start justify-start py-0 pr-[2.970001220703125px] pl-0 ">
+          <div className="self-stretch rounded flex flex-col items-center py-0 pl-0 ">
             <div
-              className="relative leading-[24px] cursor-pointer text-sm md:text-xl"
+              className="relative leading-[24px] cursor-pointer text-sm md:text-xl pr-4 sm:pr-5 transform hover:scale-105 hover:text-[white] transition-all duration-500"
               onClick={handleAppClick}
             >
               Espace Marchand
             </div>
           </div>
           <div className="rounded flex flex-row items-center justify-start gap-[0.19px]">
-            <div className="relative leading-[24px] cursor-pointer text-sm md:text-xl">
+            <div className="relative leading-[24px] cursor-pointer text-sm md:text-xl transform hover:scale-105 hover:text-[white] transition-all duration-500">
               Nos services
             </div>
             <div className="">
@@ -65,7 +64,7 @@ const Nav = () => {
             </div>
           </div>
           {/* Bouton "Simulation" pour la version mobile */}
-          <div className="relative leading-[20px] font-semibold sm:hidden pt-8 z-10 ml-auto">
+          <div className="relative font-semibold sm:hidden pt-5 z-10">
             <Button buttonText="Simulation" onClick={handleButtonClick} />
           </div>
         </div>
@@ -81,21 +80,29 @@ const Nav = () => {
             onClick={toggleNavbar}
             style={{
               marginTop: isOpen ? "50px" : "60px",
-              marginLeft: isOpen ? "20px" : "20px",
+              marginLeft: isOpen ? "-40px" : "20px",
 
               marginRight: isOpen ? "0px" : "20px",
             }}
           >
             {isOpen ? (
-              <FontAwesomeIcon icon={faXmark} size="2x" />
+              <FontAwesomeIcon
+                icon={faXmark}
+                size="2x"
+                className="text-dodgerblue bg-transparent cursor-pointer"
+              />
             ) : (
-              <FontAwesomeIcon icon={faBars} size="2x" />
+              <FontAwesomeIcon
+                icon={faBars}
+                size="2x"
+                className="text-dodgerblue bg-transparent cursor-pointer"
+              />
             )}
           </button>
         </div>
       </div>
     </nav>
   );
-};
+}
 
 export default Nav;
