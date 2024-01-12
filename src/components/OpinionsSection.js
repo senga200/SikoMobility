@@ -3,10 +3,12 @@ import OpinionsCaroussel from "./OpinionsCaroussel";
 
 function OpinionsSection() {
   return (
-    <div className="absolute top-[1430px] left-[calc(50%_-_768px)] bg-gray-100 w-[100%] h-[446px] flex flex-col items-center justify-start py-0 px-32 box-border">
-      <div className="w-[1280px] flex flex-col items-center justify-center pt-10">
-        <div className="relative font-bold inline-block line-[4rem]">
-          <h3 className="m-10">Ils nous ont fait confiance ! À votre tour !</h3>
+    <div className="absolute top-[2150px] sm:top-[1000px] h-[500px] bg-gray-100 w-[100%] flex flex-col items-center justify-start py-0 sm:px-32 box-border">
+      <div className="w-[90%] sm:w-[100%] flex flex-col items-center justify-center pt-10">
+        <div className="text-gray-900 dark:text-white lg:text-center text-xl sm:text-3xl font-extrabold mb-8 max-w-4xl w-full">
+          <h3 className="text-gray-900 dark:text-white text-center ">
+            Ils nous ont fait confiance ! À votre tour !
+          </h3>
           <OpinionsCaroussel />
         </div>
       </div>

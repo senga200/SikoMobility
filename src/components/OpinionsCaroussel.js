@@ -124,39 +124,3 @@ function OpinionsCaroussel() {
 }
 
 export default OpinionsCaroussel;
-
-//   return (
-//     <div className="relative">
-//       {datas.map((data) => (
-//         <div
-//           key={data.id}
-//           className={`${
-//             data.id === currentIndex
-//               ? "opacity-100"
-//               : "opacity-0 pointer-events-none"
-//           } transition-opacity duration-500 absolute top-0 left-0 right-0 bottom-0`}
-//         >
-//           <div className="bg-red-100 p-3 rounded-lg shadow-md max-w-[350px] mx-auto">
-//             <h5 className="text-xl font-bold py-0 ">{data.h5}</h5>
-//             <p className="text-gray-700  text-sm">{data.p}</p>
-//             <div className="flex flex-col items-start">
-//               <Rating rating={parseFloat(data.spanRate)} />
-//               <span className="text-sm text-blue-500 pl-3 pt-2">
-//                 {data.spanRate}/5{" - "}
-//                 {data.spanName}
-//                 {" - "}
-//                 {data.spanDate}
-//               </span>
-//             </div>
-//           </div>
-//         </div>
-//       ))}
-//       <div className="flex space-x-4">
-//         <Button buttonText="Previous" onClick={prevSlide} className="w-full" />
-//         <Button buttonText="Next" onClick={nextSlide} className="w-full" />
-//       </div>
-//     </div>
-//   );
-//}
-
-//export default OpinionsCaroussel;

@@ -34,15 +34,15 @@ function ServicesSection() {
   };
 
   return (
-    <div className="absolute top-[138px] left-[calc(50%_-_768px)] bg-gray-100 w-[100%] h-[1174px] flex flex-col items-center justify-start py-0 px-32 box-border max-w-[1536px] text-center">
-      <div className="w-[1280px] flex flex-col items-center justify-center pt-10">
-        <div className="relative font-bold inline-block line-[4rem]">
-          <h2 className="m-10">
+    <div className="absolute top-[138px]  bg-gray-100 w-[100%] h-auto flex flex-col items-center justify-start  box-border max-w-[1536px] text-center">
+      <div className="w-[90%] sm:w-[100%] flex flex-col items-center justify-center pt-10">
+        <div className="text-gray-900 dark:text-white lg:text-center text-xl sm:text-3xl font-extrabold mb-8 max-w-4xl w-full">
+          <h2 className="text-gray-900 dark:text-white lg:text-center  ">
             Découvrez notre gamme de services pour toutes les mobilités
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[16px] items-center justify-center py-0 pr-[0.000030517578125px] pl-0 box-border text-left text-4xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-16 items-center justify-center text-left text-4xl">
           <Card
             cardTitle="PAIEMENT 3/4/10 FOIS"
             cardText="Faites un paiement en 3, 4 ou 10 fois en carte bleue. C'est sans justificatif."
@@ -66,7 +66,7 @@ function ServicesSection() {
         </div>
       </div>
       <div className="rounded-lg flex flex-row items-center justify-center py-18 text-dodgerblue border-[2px]">
-        <div className="rounded-lg flex flex-row items-center justify-center mt-4 py-12 px-[22px] mt-[-25px] text-sm text-dodgerblue border-[2px]">
+        <div className="rounded-lg flex flex-row items-center justify-center mt-4 py-12 px-[22px] text-sm text-dodgerblue border-[2px]">
           <div className="flex flex-col items-center justify-center ">
             <Button
               buttonText="Tous nos services"

@@ -3,12 +3,31 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontSize: {
+        h1: "2.5rem",
+        h2: "2rem",
+        h3: "1.75rem",
+      },
+      gridTemplateColumns: {
+        1: "repeat(1, minmax(0, 1fr))",
+        2: "repeat(2, minmax(0, 1fr))",
+        3: "repeat(3, minmax(0, 1fr))",
+        4: "repeat(4, minmax(0, 1fr))",
+        5: "repeat(5, minmax(0, 1fr))",
+      },
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       colors: {
         gray: {
-          "100": "#1f2937",
-          "200": "#111827",
-          "300": "rgba(0, 0, 0, 0)",
-          "400": "rgba(0, 0, 0, 0.5)",
+          100: "#1f2937",
+          200: "#111827",
+          300: "rgba(0, 0, 0, 0)",
+          400: "rgba(0, 0, 0, 0.5)",
         },
         darkslategray: "#374151",
         whitesmoke: "#f9fafb",

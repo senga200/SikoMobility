@@ -7,7 +7,7 @@ import ServicesSection from "../components/ServicesSection";
 
 const Sikomobilitycom = () => {
   return (
-    <div className="relative bg-gray-100 w-full h-[2569px] text-left text-29xl text-white font-nunito-sans">
+    <div className="relative bg-gray-100 w-screen text-left text-29xl text-white font-nunito-sans">
       <Nav />
       <ServicesSection />
       <OpinionsSection />
